@@ -4,6 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E0E0E0"
+    android:padding="16dp"
     tools:context="com.example.glen.githubapi.UserActivity">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:id="@+id/username"
+        style="@style/text_field" />
+
+    <TextView
+        android:id="@+id/email"
+        style="@style/text_field" />
+
+    <TextView
+        android:id="@+id/followers"
+        style="@style/text_field" />
+
+    <TextView
+        android:id="@+id/following"
+        style="@style/text_field" />
+
+    <Button
+        android:id="@+id/owned_repos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="Repositories"
+        android:textSize="16sp" />
 
 </LinearLayout>
