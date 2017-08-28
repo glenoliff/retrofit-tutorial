@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#E0E0E0"
     android:padding="16dp"
-    tools:context="com.example.glen.githubapi.UserActivity">
+    tools:context="com.example.glen.githubapi.activity.UserActivity">
 
-    <ImageView
+    <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/avatar"
-        android:layout_width="60dp"
-        android:layout_height="60dp" />
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        fresco:roundedCornerRadius="10dp" />
 
     <TextView
-        android:id="@+id/username"
+        android:id="@+id/name"
+        style="@style/text_field" />
+
+    <TextView
+        android:id="@+id/login"
         style="@style/text_field" />
 
     <TextView
