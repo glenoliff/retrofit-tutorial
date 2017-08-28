@@ -1,9 +1,11 @@
 package com.example.glen.githubapi.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -57,6 +59,12 @@ public class UserActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         mUnbinder = ButterKnife.bind(this);
+
+        mOwnedRepos.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ReposActivity.class);
+            intent.putExtra(USER_NAME_KEY, username);
+            startActivity(intent);
+        });
     }
 
     @Override
@@ -93,7 +101,7 @@ public class UserActivity extends AppCompatActivity {
                     mLogin.setText(user.getLogin());
 
                     if (TextUtils.isEmpty(user.getName())) {
-                        mEmail.setText("No name specified");
+                        mName.setText("No name specified");
                     } else {
                         mName.setText(user.getName());
                     }
